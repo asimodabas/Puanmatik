@@ -1,0 +1,63 @@
+<ion-view view-title="Puanmatik">
+  <ion-content>
+ 
+ <!--Bilgi kartı-->
+<div class="card">
+  <div class="item item-text-wrap royal">
+   Lütfen sizden istenilen netleri giriniz. Aşağıdaki ilgili alanlara...
+  </div>
+</div>
+
+
+
+ <!--Puan Hesaplama alanı-->
+<div class="list">
+ 
+
+   <!--Mat verileri-->
+  <div class="item range range-positive">
+    Mat
+    <input type="range" ng-model="mat" min="0" max="40" ng-change="hesapla(mat,fen,sos,tur)">
+    {{mat}}net
+  </div>
+
+
+   <!--Fen verileri-->
+  <div class="item range range-positive">
+    Fen
+    <input type="range" ng-model="fen" min="0" max="40" ng-change="hesapla(mat,fen,sos,tur)">
+    {{fen}}net
+  </div>
+
+
+
+     <!--Sos verileri-->
+  <div class="item range range-positive">
+    Sos
+    <input type="range" ng-model="sos" min="0" max="40" ng-change="hesapla(mat,fen,sos,tur)">
+    {{sos}}net
+  </div>
+
+
+     <!--Tür verileri-->
+  <div class="item range range-positive">
+    Tür
+    <input type="range" ng-model="tur" min="0" max="40" ng-change="hesapla(mat,fen,sos,tur)">
+    {{tur}}net
+  </div>
+</div>
+
+
+{{sonuc>0 ? sonuc>400 ? 'Süpersin':'Çalış':''}}
+
+ <!--Bilgi kartı-->
+<div class="card">
+  <div class="item item-text-wrap royal">
+  <h1 style="font-size:40px;"> YKS {{sonuc | number:2}} Puan </h1>
+  </div>
+</div>
+
+
+
+  </ion-content>
+</ion-view>
